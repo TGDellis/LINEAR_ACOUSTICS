@@ -1,0 +1,12 @@
+rm main.o
+rm aeroacoustic.o
+rm main.exe
+
+gcc -c main.c
+gcc -c aeroacoustic.c
+gcc -o main.exe  aeroacoustic.o main.o -lgsl -lm -O3 
+./main.exe
+echo $?
+echo 'this should be 12'
+
+
